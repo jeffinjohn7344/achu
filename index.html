@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Achu 💜</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: #fff5fc;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,120,200,.35), transparent 30%),
+    radial-gradient(circle at 85% 70%, rgba(143,100,255,.4), transparent 35%),
+    linear-gradient(135deg, #160b2e, #40205f, #792b70, #24113f);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "✦   ·   ✧   ·   ✦   ·   ✧   ·   ✦";
+  position: fixed;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  font-size: 23px;
+  letter-spacing: 7px;
+  color: #ffe5fa;
+  text-shadow: 0 0 15px #ff9ee8;
+  pointer-events: none;
+  z-index: 0;
+  animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .3; }
+  to { opacity: 1; }
+}
+
+.page {
+  display: none;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 45px 18px 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: fade .7s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #ffd9f4;
+  font-size: clamp(2rem, 7vw, 3.4rem);
+  margin: 18px 0;
+  text-shadow: 0 0 18px rgba(255,120,220,.7);
+}
+
+h2 {
+  color: #ffe1f7;
+  margin: 15px 0;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 10px auto 20px;
+}
+
+button {
+  background: linear-gradient(45deg, #ff4f9a, #9856ff);
+  color: white;
+  border: 1px solid #ffc8f0;
+  padding: 13px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 9px;
+  box-shadow: 0 5px 20px #d77ba866;
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 22px #ff8bdf;
+}
+
+.hero {
+  font-size: 70px;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.12); }
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  padding: 25px;
+  margin: 15px auto;
+  background: rgba(255,255,255,.12);
+  color: #fff5fc;
+  border: 1px solid rgba(255,220,250,.6);
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(255,100,200,.2);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Animated kiss stickers */
+.kiss-stickers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 20px 0;
+}
+
+.kiss-stickers span {
+  display: inline-block;
+  font-size: 42px;
+  animation: kissFloat 2s ease-in-out infinite;
+}
+
+.kiss-stickers span:nth-child(2) {
+  animation-delay: .5s;
+}
+
+.kiss-stickers span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.kiss-stickers span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes kissFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+/* Birthday cake */
+.cake {
+  font-size: 100px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.cake:hover {
+  transform: scale(1.1);
+}
+
+/* Birthday letter */
+.letter {
+  white-space: pre-line;
+  font-style: italic;
+  font-size: 1.08rem;
+}
+
+/* Floating decorations */
+.floating {
+  position: fixed;
+  bottom: -40px;
+  font-size: 25px;
+  pointer-events: none;
+  animation: floatUp 7s linear forwards;
+  z-index: 5;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-115vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #ffe1f7;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 18px;
+  }
+
+  .page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="music" autoplay loop preload="auto">
+  <source src="I Wish You Happy Birthday Song Mp3 Ringtone Download Audio.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1: BIRTHDAY WELCOME -->
+<section class="page active" id="page1">
+
+  <div class="hero">🎂💜🎀</div>
+
+  <p>✨ A little surprise made with lots of love ✨</p>
+
+  <h1>Happy Birthday,<br>Ennavale! 💖</h1>
+
+  <div class="kiss-stickers">
+    <span>💋</span>
+    <span>😘</span>
+    <span>💋</span>
+  </div>
+
+  <div class="card">
+    <h2>🎶 A Song Just for You🎶</h2> 
+    <h2>🎶Tap the screen🎶 </h2>
+    
+
+    <p>
+      Close your eyes, listen to the music,
+      and enjoy your beautiful day! 🌷💕
+    </p>
+
+    <div style="font-size:45px;">🎼 🎧 🎵</div>
+
+    <p>Every beat carries a little birthday magic. 💗</p>
+  </div>
+
+  <button onclick="startSurprise()">
+    Open Your Surprise 💌
+  </button>
+
+  <footer>Made with love, just for you 💜</footer>
+</section>
+
+<!-- PAGE 2: BIRTHDAY CAKE SURPRISE -->
+<section class="page" id="page2">
+
+  <div class="hero">🎂</div>
+
+  <h1>Make a Wish, Birthday Girl! ✨</h1>
+
+  <p>Close your eyes, make a wish, and tap the cake! 💗</p>
+
+  <div class="cake" onclick="cutCake()">🎂</div>
+
+  <button onclick="cutCake()">Cut Your Cake 🎉</button>
+
+  <div class="card hidden" id="wish">
+    <h2>🎊 Surprise! 🎊</h2>
+
+    <p>
+      Happy Birthday to my  Kutty Angel! 🌸
+      May your days be filled with laughter,
+      your heart with peace, and your life
+      with beautiful adventures.
+    </p>
+
+    <p>Keep shining, keep smiling, and keep being YOU! 💖</p>
+
+    <div class="kiss-stickers">
+      <span>😘</span>
+      <span>💋</span>
+      <span>💕</span>
+    </div>
+  </div>
+
+  <button onclick="showPage(1)">← Previous</button>
+  <button onclick="showPage(3)">One Last Thing 💌</button>
+</section>
+
+<!-- PAGE 3: FINAL BIRTHDAY LETTER -->
+<section class="page" id="page3">
+
+  <div class="hero">💌💜🌹</div>
+
+  <h1>A Little Letter for You</h1>
+
+  <div class="card">
+    <p class="letter">My Dear Kutty Pissasei, 💕
+
+Happy 7-teenth Born-day!
+Indha pudhu varusham un life-la happiness, success, courage, and
+ smile panna countless reasons kondu varanum nu aasai paduren. ❤️
+
+Nee eppovume ippadiye oru wonderful person-ah iru.
+Nee evlo special nu marandhudadha, un suthi irukkura people-ku 
+nee evlo happiness kudukura nu eppovume nyabagam vachuko. 🫶🏻✨
+
+Un manasula irukkura ovvoru dream-um oru beautiful reality-ah maaranum.
+Un life full-ah happiness, love, success, and beautiful memories
+neraya irukkanum nu manasara wish panren. 💗🎂
+Un dreams a nee kadipa one day achieve panuva. 
+Un kuda irunthu una naan life long happie aa vachirupe.
+
+Innaiku Your day! 🥳💗 Ovvoru second-um happy-ah enjoy pannu, 
+yepovu tension aa irukatha, future aa nenachu kavala padatha, 
+and un azhagana smile-ah eppovume maintain pannu anta ap iruka pallu theriya mathiri! 🎂🌷✨
+
+Unakku idhuvaraikkum irundhadha vida romba happiest birthday-ah irukkanum nu manasara wish panren! ❤️🫶🏻
+With lots of love,
+Your's Appii ❤️</p>
+
+    <div class="kiss-stickers">
+      <span>😘</span>
+      <span>💋</span>
+      <span>💕</span>
+      <span>😘</span>
+    </div>
+
+    <p>Sending you lots of birthday kisses! 💋💗</p>
+  </div>
+
+  <button onclick="showFinal()">One More Surprise 💖</button>
+
+  <div class="card hidden" id="finalMessage">
+    <h2>Happy Birthday, My chellame! 💗</h2>
+
+    <p>
+      Innaiku un special day mattum illa, indha world-ku unna maadhiri
+       oru beautiful soul kidaicha day! 🫶🏻✨ 
+      
+Life-la evlo changes vandhaalum, nee ippadiye genuine-ah,
+ kind-ah, andha azhagana heart-oda irukkanum.
+  Unakku theriyadha alavukku nee romba special! 🌷💫
+  
+
+Indha new chapter un life-oda best chapter-ah irukkanum
+. Neraya memories, unexpected surprises, endless laughter, 
+and beautiful moments unakkaaga wait pannittu irukkanum! 🧿🎀
+
+Once again, Happiest Birthday to you! 🎉💗 
+Un life full-ah happiness-um love-um blessings-um nirainjirukkanum! 🫂✨
+       
+    </p>
+
+    <div class="hero">💖💝💗</div>
+
+    <div class="kiss-stickers">
+      <span>💋</span>
+      <span>😘</span>
+      <span>💋</span>
+    </div>
+
+    <p>Lots of love and birthday kisses! 💋💕</p>
+  </div>
+
+  <button onclick="showPage(2)">← Previous</button>
+  <button onclick="showPage(1)">Replay From Start 🔁</button>
+</section>
+
+<script>
+const music = document.getElementById("music");
+music.volume = 0.5;
+
+// Try autoplay; browsers may require a user click
+window.addEventListener("load", function() {
+  music.play().catch(function() {});
+});
+
+// Start music after the first user interaction
+document.addEventListener("click", function startMusicOnce() {
+  if (music.paused) {
+    music.play().catch(function() {});
+  }
+}, { once: true });
+
+// Navigate between pages
+function showPage(number) {
+  document.querySelectorAll(".page").forEach(function(page) {
+    page.classList.remove("active");
+  });
+
+  document.getElementById("page" + number).classList.add("active");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  if (number === 1) {
+    document.getElementById("wish").classList.add("hidden");
+    document.getElementById("finalMessage").classList.add("hidden");
+  }
+}
+
+// Start music and open the cake page
+function startSurprise() {
+  if (music.paused) {
+    music.play().catch(function() {});
+  }
+
+  showPage(2);
+}
+
+// Reveal birthday wish and floating decorations
+function cutCake() {
+  document.getElementById("wish").classList.remove("hidden");
+
+  for (let i = 0; i < 15; i++) {
+    createDecoration();
+  }
+}
+
+// Reveal final message
+function showFinal() {
+  document.getElementById("finalMessage").classList.remove("hidden");
+
+  for (let i = 0; i < 25; i++) {
+    createDecoration();
+  }
+}
+
+// Create floating hearts, kisses, and sparkles
+function createDecoration() {
+  const decoration = document.createElement("div");
+  decoration.className = "floating";
+
+  const decorations = [
+    "💗", "💕", "💖", "🌸", "✨", "⭐", "💋", "😘"
+  ];
+
+  decoration.textContent =
+    decorations[Math.floor(Math.random() * decorations.length)];
+
+  decoration.style.left = Math.random() * 100 + "vw";
+  decoration.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+  document.body.appendChild(decoration);
+
+  setTimeout(function() {
+    decoration.remove();
+  }, 8000);
+}
+
+// Continuous floating decorations
+setInterval(function() {
+  if (Math.random() > 0.45) {
+    createDecoration();
+  }
+}, 1400);
+</script>
+
+</body>
+</html>
